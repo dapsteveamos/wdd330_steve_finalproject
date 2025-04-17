@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,11 +24,11 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=Poppins&display=swap"
         rel="stylesheet">
     <!-- STYLE SHEETS -->
-     <link rel="stylesheet" href="styles/productreviewform.css">
-     <link rel="stylesheet" href="styles/steamo.css">
-    <script src="scripts/productreview.js" defer></script>
-    <script src="scripts/steamo.js" defer></script>
-    <!-- <script src="/scripts/form.js" defer></script> -->
+    <link rel="stylesheet" href="styles/productreviewform.css">
+    <link rel="stylesheet" href="styles/steamo.css">
+    <script src="scripts/productreview.js" type="module"></script>
+    <script src="scripts/steamo.js" type="module"></script>
+    <!-- <script src="/scripts/form.js" type="module"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
@@ -36,14 +37,15 @@
 <body>
 
     <header>
-        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px" alt="Steamo Technologies logo">
+        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px"
+            alt="Steamo Technologies logo">
         <nav class="navigation">
             <a href="index.html" aria-label="Go to Home page">Home</a>
             <a href="aboutus.html" aria-label="Learn More About Us">About Us</a>
             <a href="product.html" aria-label="Order our Product">Products</a>
             <a href="news.html" aria-label="Update yourself with current News">News</a>
             <a href="contactus.html" aria-label="Contact Us for More Information">Contact Us</a>
-               
+
             <div class="dropdown">
                 <a href="directory.html" aria-label="Update yourself with current News">Directory</a>
                 <button class="dropdown-toggle" aria-label="Toggle News dropdown">▼</button>
@@ -53,7 +55,7 @@
             </div>
         </nav>
         <button class="hamburger">☰</button>
-        </header>
+    </header>
     <h1>Product Review</h1>
 
     <form action="review.html" method="get">
@@ -63,7 +65,7 @@
             <option value="" disabled selected>Choose a Product ...</option>
             <!-- Options will be dynamically populated by JavaScript -->
         </select>
-      
+
         <!-- Overall Rating (Stars) -->
         <label>Overall Rating:</label>
         <div id="rating">
@@ -88,11 +90,11 @@
                 <label for="star5">☆☆☆☆☆</label>
             </div>
         </div>
-        
+
         <!-- Date of Installation -->
         <label for="installationDate">Date of Installation:</label>
         <input type="date" id="installationDate" name="installationDate" required>
-      
+
         <!-- Useful Features (Checkboxes) -->
         <label>Which features of the product did you find useful?<br>(Check all that apply)</label>
         <div class="checkbox-group">
@@ -113,25 +115,28 @@
                 <label for="feature4">Design</label>
             </div>
         </div>
-        
+
         <!-- Written Review -->
         <label for="review">Written Review<span class="optional">(Optional)</span></label>
         <textarea id="review" name="review" rows="4" cols="50"></textarea>
-      
+
         <!-- User Name -->
         <label for="username">Your Name<span class="optional">(Optional)</span></label>
         <input type="text" id="username" name="username">
-      
+
         <!-- Submit Button -->
         <input type="submit" value="Post Review">
     </form>
 
     <footer>
-        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px" alt="Steamo Technologies logo">
+        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px"
+            alt="Steamo Technologies logo">
         <div>
-            <p>Steamo Technologies is the platform built for enterprise individuals and companies. Smart design capabilities, flexible dev tools, and streamlined business management mean you can do more—with more.</p>
+            <p>Steamo Technologies is the platform built for enterprise individuals and companies. Smart design
+                capabilities, flexible dev tools, and streamlined business management mean you can do more—with more.
+            </p>
         </div>
-        
+
         <div>
             <nav class="menuf">
                 <h2 class="footerh2">Menu</h2>
@@ -142,7 +147,7 @@
                 <a href="contactus.html">Contact Us</a>
             </nav>
         </div>
-    
+
         <div>
             <ul>
                 <h2 class="footerh2">Policies</h2>
@@ -153,13 +158,16 @@
             </ul>
         </div>
 
-    
+
         <div class="smlogos">
-            <a class="sl" href="https://linkedin.com/in/steve-amos-ab910b282"><img class="footer-logo" src="images/linkedinb.png" alt="LinkedIn logo"></a> 
-            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo" src="images/facebookb.png" alt="Facebook logo"></a> 
-            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo" src="images/instagramb.png" alt="Instagram logo"></a> 
+            <a class="sl" href="https://linkedin.com/in/steve-amos-ab910b282"><img class="footer-logo"
+                    src="images/linkedinb.png" alt="LinkedIn logo"></a>
+            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo"
+                    src="images/facebookb.png" alt="Facebook logo"></a>
+            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo"
+                    src="images/instagramb.png" alt="Instagram logo"></a>
         </div>
-    
+
         <div class="pfoot">
             <p>&copy; 2024 Steamo Technologies | IT Solutions</p>
         </div>
@@ -168,11 +176,12 @@
     <div id="whatsapp-button">
         <img src="images/whatsapp-icon.png" alt="WhatsApp" id="whatsapp-icon" width="9%" />
         <div id="message-box">
-          <p>Message Steamo Technologies!</p>
-          <textarea id="message-input" placeholder="Type your message here..."></textarea>
-          <button id="send-button">Send</button>
-          <a href="https://wa.me/2349166577130" target="_blank">Go to WhatsApp</a>
+            <p>Message Steamo Technologies!</p>
+            <textarea id="message-input" placeholder="Type your message here..."></textarea>
+            <button id="send-button">Send</button>
+            <a href="https://wa.me/2349166577130" target="_blank">Go to WhatsApp</a>
         </div>
-      </div>
+    </div>
 </body>
+
 </html>

@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 export default defineConfig({
-  root: './project', // no dot-slash needed
+  root: './project',
   build: {
-    outDir: '../dist', // this places the build output one level up
-    emptyOutDir: true
+    outDir: '../dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'project/index.html')
+      }
+    }
   }
 })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +10,25 @@
     <!-- STYLE SHEETS -->
     <link rel="stylesheet" href="styles/productreviewform.css">
     <link rel="stylesheet" href="styles/steamo.css">
-   <script src="scripts/productreview.js" defer></script>
-   <script src="scripts/steamo.js" defer></script>
-   <!-- <script src="/scripts/form.js" defer></script> -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <script src="scripts/productreview.js" type="module"></script>
+    <script src="scripts/steamo.js" type="module"></script>
+    <!-- <script src="/scripts/form.js" type="module"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px" alt="Steamo Technologies logo">
+        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px"
+            alt="Steamo Technologies logo">
         <nav class="navigation">
             <a href="index.html" aria-label="Go to Home page">Home</a>
             <a href="aboutus.html" aria-label="Learn More About Us">About Us</a>
             <a href="product.html" aria-label="Order our Product">Products</a>
             <a href="news.html" aria-label="Update yourself with current News">News</a>
             <a href="contactus.html" aria-label="Contact Us for More Information">Contact Us</a>
-               
+
             <div class="dropdown">
                 <a href="directory.html" aria-label="Update yourself with current News">Directory</a>
                 <button class="dropdown-toggle" aria-label="Toggle News dropdown">▼</button>
@@ -36,17 +38,21 @@
             </div>
         </nav>
         <button class="hamburger">☰</button>
-        </header>
+    </header>
     <h1>Your message has been sent Successfully</h1>
     <h1 class="tnks">Thank you for sending message</h1>
-    <p class="rcount">You have submitted <span id="reviewCount"></span> reviews.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-   
+    <p class="rcount">You have submitted <span id="reviewCount"></span> reviews.</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     <footer>
-        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px" alt="Steamo Technologies logo">
+        <img class="logo01" src="images/STEAMO TECHNOLOGIES LOGO ONLY 01.png" width="50px" height="50px"
+            alt="Steamo Technologies logo">
         <div>
-            <p>Steamo Technologies is the platform built for enterprise individuals and companies. Smart design capabilities, flexible dev tools, and streamlined business management mean you can do more—with more.</p>
+            <p>Steamo Technologies is the platform built for enterprise individuals and companies. Smart design
+                capabilities, flexible dev tools, and streamlined business management mean you can do more—with more.
+            </p>
         </div>
-        
+
         <div>
             <nav class="menuf">
                 <h2 class="footerh2">Menu</h2>
@@ -57,7 +63,7 @@
                 <a href="contactus.html">Contact Us</a>
             </nav>
         </div>
-    
+
         <div>
             <ul>
                 <h2 class="footerh2">Policies</h2>
@@ -68,13 +74,16 @@
             </ul>
         </div>
 
-    
+
         <div class="smlogos">
-            <a class="sl" href="https://linkedin.com/in/steve-amos-ab910b282"><img class="footer-logo" src="images/linkedinb.png" alt="LinkedIn logo"></a> 
-            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo" src="images/facebookb.png" alt="Facebook logo"></a> 
-            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo" src="images/instagramb.png" alt="Instagram logo"></a> 
+            <a class="sl" href="https://linkedin.com/in/steve-amos-ab910b282"><img class="footer-logo"
+                    src="images/linkedinb.png" alt="LinkedIn logo"></a>
+            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo"
+                    src="images/facebookb.png" alt="Facebook logo"></a>
+            <a class="sl" href="https://web.facebook.com/profile.php?id=61566945636553"><img class="footer-logo"
+                    src="images/instagramb.png" alt="Instagram logo"></a>
         </div>
-    
+
         <div class="pfoot">
             <p>&copy; 2024 Steamo Technologies | IT Solutions</p>
         </div>
@@ -84,14 +93,15 @@
         const reviewCount = localStorage.getItem('reviewsCount') || 0;
         document.getElementById('reviewCount').textContent = reviewCount;
     </script>
-     <div id="whatsapp-button">
+    <div id="whatsapp-button">
         <img src="images/whatsapp-icon.png" alt="WhatsApp" id="whatsapp-icon" width="9%" />
         <div id="message-box">
-          <p>Message Steamo Technologies!</p>
-          <textarea id="message-input" placeholder="Type your message here..."></textarea>
-          <button id="send-button">Send</button>
-          <a href="https://wa.me/2349166577130" target="_blank">Go to WhatsApp</a>
+            <p>Message Steamo Technologies!</p>
+            <textarea id="message-input" placeholder="Type your message here..."></textarea>
+            <button id="send-button">Send</button>
+            <a href="https://wa.me/2349166577130" target="_blank">Go to WhatsApp</a>
         </div>
-      </div>
+    </div>
 </body>
+
 </html>
