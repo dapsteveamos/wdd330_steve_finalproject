@@ -26,7 +26,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// drop down 
+// drop down
 // Dropdown toggle for mobile
 // document.querySelectorAll('.dropdown > a').forEach(parentLink => {
 //     parentLink.addEventListener('click', (e) => {
@@ -67,7 +67,7 @@ document.getElementById("whatsapp-icon").addEventListener("click", function () {
     const messageBox = document.getElementById("message-box");
     messageBox.style.display = messageBox.style.display === "none" || messageBox.style.display === "" ? "block" : "none";
   });
-  
+
   document.getElementById("send-button").addEventListener("click", function () {
     const message = document.getElementById("message-input").value;
     if (message.trim() !== "") {
@@ -78,8 +78,59 @@ document.getElementById("whatsapp-icon").addEventListener("click", function () {
       alert("Please enter a message before sending.");
     }
   });
-  
-  
+
+
+
+const apiKey = "5d111ba87c30a99edebf119792b1ef51"; // Default OpenWeatherMap API Key
+const lat = 4.837430; // Latitude
+const lon = 7.011537; // Longitude
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => {
+    const weatherInfo = `
+      Location: ${data.name} <br>
+      Weather: ${data.weather[0].description} <br>
+      Temperature: ${data.main.temp}°C <br>
+      Humidity: ${data.main.humidity}% <br>
+      Wind Speed: ${data.wind.speed} m/s
+    `;
+    document.getElementById("weather-info").innerHTML = weatherInfo;
+  })
+  .catch((error) => {
+    document.getElementById("weather-info").textContent =
+      "Error fetching weather data.";
+    console.error("Weather API Error:", error);
+  });
+
+// JavaScript
+document.getElementById("getJoke").addEventListener("click", () => {
+  fetch("https://official-joke-api.appspot.com/random_joke")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("jokeDisplay").textContent = `${data.setup} - ${data.punchline}`;
+    })
+    .catch(err => console.error("Error fetching joke:", err));
+});
+
+
+document.getElementById("getJoke").addEventListener("click", () => {
+  fetch("https://official-joke-api.appspot.com/random_joke")
+    .then(res => res.json())
+    .then(data => {
+      const jokeEl = document.getElementById("jokeDisplay");
+      jokeEl.textContent = `${data.setup} - ${data.punchline}`;
+
+      // Trigger animation
+      jokeEl.classList.remove("explode"); // Reset animation
+      void jokeEl.offsetWidth; // Trigger reflow
+      jokeEl.classList.add("explode");
+    })
+    .catch(err => console.error("Error fetching joke:", err));
+});
+
+
 
 
 // steamo.js
